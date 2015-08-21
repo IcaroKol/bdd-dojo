@@ -18,7 +18,7 @@ public class SmokeSteps {
     static WebDriver driver;
 
     {
-        System.setProperty("webdriver.chrome.driver", "/Users/yamitcardenas/desarrollo/tools/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/SPOSMEN/projects/velocity/education/bdd-dojo/chromedriver");
         driver = new ChromeDriver();
         WebDriverRunner.setWebDriver(driver);
     }
