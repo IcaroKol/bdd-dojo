@@ -3,6 +3,7 @@ package edu;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import cucumber.api.java.After;
+import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Entonces;
 import org.openqa.selenium.By;
@@ -32,6 +33,24 @@ public class SmokeSteps {
     public void veo_el_mensaje(String message) throws Throwable {
         $(By.id("welcome")).shouldHave(text(message));
     }
+
+    @Entonces("^veo segundo mensaje \"([^\"]*)\"$")
+    public void veo_segundo_mensaje(String message) throws Throwable {
+        $(By.id("startMessage")).shouldHave(text(message));
+    }
+
+    @Cuando("^presiono Start$")
+    public void presiono_Start() throws Throwable {
+        $(By.id("startMessage")).click();
+    }
+
+
+    @Entonces("^el juego muestra la pantalla de ingreso de jugadores con el mensaje \"([^\"]*)\"$")
+    public void el_juego_muestra_la_pantalla_de_ingreso_de_jugadores_con_el_mensaje(String message) throws Throwable {
+        // Express the Regexp above with the code you wish you had
+        $(By.id("figth")).shouldHave(text(message));
+    }
+
 
     @After
     public void tearDown(){
