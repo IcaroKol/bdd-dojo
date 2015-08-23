@@ -1,2 +1,4 @@
 <h1 id="welcome">${welcome}</h1>
+<a id="startMessage" href="/fight">${startMessage}</h1>
+
 
